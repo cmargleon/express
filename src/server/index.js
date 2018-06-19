@@ -28,7 +28,24 @@ app.post('/api/registerGraduate', function(req, res) {
     var email = req.body.email;
     var phoneNumber = req.body.phonenumber;
 
-    console.log("pasó")
+    console.log("pasó");
+    res.sendStatus(200);
+        
+});
+
+app.post('/api/registerGraduate2', function(req, res) {
+    console.log("Creando cuenta graduado");
+    res.sendStatus(200);
+    console.log(req.body);
+    var graduateRut = req.body.graduaterut;
+    var cardId = req.body.cardid;
+    var firstName = req.body.firstname;
+    var lastName = req.body.lastname;
+    var email = req.body.email;
+    var phoneNumber = req.body.phonenumber;
+
+    console.log("pasó");
+    res.sendStatus(200);
         
 });
 
