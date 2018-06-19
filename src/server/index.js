@@ -17,6 +17,10 @@ app.get('/test', function(req, res) {
     res.sendStatus(200);
 });
 
+app.get('/test2', function(req, res) {
+    res.send("funciona");
+});
+
 //post call to register graduate on the network
 app.post('/api/registerGraduate', function(req, res) {
     console.log("Creando cuenta graduado");
