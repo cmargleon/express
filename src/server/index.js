@@ -17,12 +17,19 @@ app.get('/test', function(req, res) {
     res.sendStatus(200);
 });
 
-app.get('/test2', function(req, res) {
-    res.send("200");
-});
+//post call to register graduate on the network
+app.post('/api/registerGraduate', function(req, res) {
+    console.log("Creando cuenta graduado");
+    console.log(req.body);
+    var graduateRut = req.body.graduaterut;
+    var cardId = req.body.cardid;
+    var firstName = req.body.firstname;
+    var lastName = req.body.lastname;
+    var email = req.body.email;
+    var phoneNumber = req.body.phonenumber;
 
-app.get('/test3', function(req, res) {
-    res.sendStatus(200).send("funciona");
+    console.log("pasó")
+        
 });
 
 const server = app.listen(PORT, function () {
