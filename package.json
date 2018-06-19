@@ -1,6 +1,6 @@
 {
   "name": "react-starter-kit",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "An ES6 ready React + Express starter kit",
   "main": "src/server.js",
   "scripts": {
@@ -9,14 +9,14 @@
     "build-prod": "NODE_ENV=production gulp build",
     "watch": "gulp watch"
   },
-  "author": "Cole Murray <@colemurray.cs@gmail.com>",
+  "author": "Claudio Matias <@cmargleon@gmail.com>",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/ColeMurray/react-express-starter-kit.git"
+    "url": "https://github.com/cmargleon/express.git"
   },
   "bugs": {
-    "url": "https://github.com/ColeMurray/react-express-starter-kit/issues"
+    "url": "https://github.com/cmargleon/express/issues"
   },
   "keywords": [
     "react",
