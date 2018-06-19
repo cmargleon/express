@@ -3,7 +3,7 @@ A minimalist ES6 ready React and Express starter kit.
 
 
 # Usage
-git clone https://github.com/ColeMurray/react-express-starter-kit.git
+git clone https://github.com/cmargleon/express.git
 
 1. cd react-express-starter-kit
 2. npm install
