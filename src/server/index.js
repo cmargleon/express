@@ -141,20 +141,7 @@ app.post('/api/registerGraduate', function(req, res) {
 
     console.log("pasó");
     
-    registerGraduate(cardId, graduateRut, firstName, lastName, email, phoneNumber)
-                .then((response) => {
-                    //return error if error in response
-                    if (response.error != null) {
-                    res.json({
-                        error: response.error
-                    });
-                    } else {
-                    //else return success
-                    res.json({
-                        success: response
-                    });
-                    }
-                });
+    
         
 });
 
