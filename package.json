@@ -26,6 +26,12 @@
     "gulp"
   ],
   "dependencies": {
+    "composer-admin": "^0.19.7",
+    "composer-cli": "^0.19.7",
+    "composer-client": "^0.19.7",
+    "composer-common": "^0.19.7",
+    "composer-connector-embedded": "^0.19.7",
+    "composer-playground": "^0.19.7",
     "express": "^4.13.4",
     "morgan": "^1.7.0",
     "react": "^15.1.0",
