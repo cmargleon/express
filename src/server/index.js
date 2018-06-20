@@ -7,7 +7,28 @@ const app = express();
 const router = express.Router();
 const DEBUG = process.env.NODE_ENV !== 'production';
 const PORT = DEBUG ? '3000' : process.env.PORT;
+//var network = require('./network/network.js');
 
+//NETWORK
+
+const AdminConnection = require('composer-admin').AdminConnection;
+const BusinessNetworkConnection = require('composer-client').BusinessNetworkConnection;
+const { BusinessNetworkDefinition, CertificateUtil, IdCard } = require('composer-common');
+
+//declate namespace
+const namespace = 'org.degree.ucsd';
+
+//in-memory card store for testing so cards are not persisted to the file system
+const cardStore = require('composer-common').NetworkCardStoreManager.getCardStore( { type: 'composer-wallet-inmemory' } );
+
+//admin connection to the blockchain, used to deploy the business network
+let adminConnection;
+
+//this is the business network connection the tests will use.
+let businessNetworkConnection;
+
+let businessNetworkName = 'degree';
+let factory;
 
 
 app.use(express.static(__dirname + '/../../public'));
@@ -35,9 +56,22 @@ app.post('/api/registerGraduate', function(req, res) {
     var phoneNumber = req.body.phonenumber;
 
     console.log("pasó");
-    
-    
-        
+    /*
+    network.registerGraduate(cardId, graduateRut, firstName, lastName, email, phoneNumber)
+                .then((response) => {
+                    //return error if error in response
+                    if (response.error != null) {
+                    res.json({
+                        error: response.error
+                    });
+                    } else {
+                    //else return success
+                    res.json({
+                        success: response
+                    });
+                    }
+                });
+        */
 });
 
 app.post('/api/registerGraduate2', function(req, res) {
