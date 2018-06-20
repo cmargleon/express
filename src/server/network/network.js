@@ -18,7 +18,7 @@ let businessNetworkName = 'degree';
 let factory;
 
 
-module.exports = {
+
     /*
     * Create Graduate participant and import card for identity
     * @param {String} cardId Import card id for Graduate
@@ -28,7 +28,7 @@ module.exports = {
     * @param {String} phoneNumber Graduate phone number
     * @param {String} email Graduate email
     */
-   registerGraduate: async function (cardId, graduateRut,firstName, lastName, email, phoneNumber) {
+   export async function registerGraduate(cardId, graduateRut,firstName, lastName, email, phoneNumber) {
     try {
 
       //connect as admin
@@ -69,5 +69,4 @@ module.exports = {
       return error;
     }
 
-  },
-}
+  }
