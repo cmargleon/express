@@ -2,7 +2,7 @@ import express from "express";
 import bodyParser from "body-parser";
 import path from "path";
 import morgan from "morgan";
-import { helloWorld } from './network'
+import { helloWorld } from './network.js';
 //import { registerGraduate } from './network/network.js' // ES modules
 //var network = require('./network/network.js');
 /*
