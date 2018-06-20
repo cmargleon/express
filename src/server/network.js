@@ -1,3 +1,3 @@
-export async function helloWorld () {
+export function helloWorld () {
     console.log('hello world')
   }
