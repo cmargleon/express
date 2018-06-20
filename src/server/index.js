@@ -4,7 +4,7 @@ import path from "path";
 import morgan from "morgan";
 import { helloWorld } from './network.js';
 
-async function helloWorld();
+helloWorld();
 //import { registerGraduate } from './network/network.js' // ES modules
 //var network = require('./network/network.js');
 /*
