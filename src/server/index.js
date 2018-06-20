@@ -2,7 +2,7 @@ import express from "express";
 import bodyParser from "body-parser";
 import path from "path";
 import morgan from "morgan";
-import { registerGraduate } from './network/network.js' // ES modules
+//import { registerGraduate } from './network/network.js' // ES modules
 //var network = require('./network/network.js');
 /*
 const AdminConnection = require('composer-admin').AdminConnection;
