@@ -7,7 +7,7 @@ const app = express();
 const router = express.Router();
 const DEBUG = process.env.NODE_ENV !== 'production';
 const PORT = DEBUG ? '3000' : process.env.PORT;
-var network = require('./network/network.js');
+//var network = require('./network/network.js');
 
 app.use(express.static(__dirname + '/../../public'));
 app.use(morgan('dev'));
