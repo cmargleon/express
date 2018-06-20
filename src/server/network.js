@@ -17,7 +17,7 @@ let businessNetworkConnection;
 let businessNetworkName = 'degree';
 let factory;
 
-export function registerGraduate(cardId, graduateRut,firstName, lastName, email, phoneNumber) {
+export async function registerGraduate(cardId, graduateRut,firstName, lastName, email, phoneNumber) {
     try {
   
         //connect as admin
