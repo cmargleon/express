@@ -34,6 +34,7 @@ app.post('/api/registerGraduate', function(req, res) {
     var phoneNumber = req.body.phonenumber;
 
     console.log("pasó");
+    /*
     network.registerGraduate(cardId, graduateRut, firstName, lastName, email, phoneNumber)
                 .then((response) => {
                     //return error if error in response
@@ -48,7 +49,7 @@ app.post('/api/registerGraduate', function(req, res) {
                     });
                     }
                 });
-        
+        */
 });
 
 app.post('/api/registerGraduate2', function(req, res) {
