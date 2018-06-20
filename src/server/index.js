@@ -2,7 +2,10 @@ import express from "express";
 import bodyParser from "body-parser";
 import path from "path";
 import morgan from "morgan";
-import * as composerAdmin from "composer-admin";
+const AdminConnection = require('composer-admin').AdminConnection;
+const BusinessNetworkConnection = require('composer-client').BusinessNetworkConnection;
+const { BusinessNetworkDefinition, CertificateUtil, IdCard } = require('composer-common');
+
 
 const app = express();
 const router = express.Router();
