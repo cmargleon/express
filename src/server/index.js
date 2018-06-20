@@ -7,6 +7,7 @@ const app = express();
 const router = express.Router();
 const DEBUG = process.env.NODE_ENV !== 'production';
 const PORT = DEBUG ? '3000' : process.env.PORT;
+var network = require('./network/network.js');
 
 app.use(express.static(__dirname + '/../../public'));
 app.use(morgan('dev'));
@@ -33,7 +34,20 @@ app.post('/api/registerGraduate', function(req, res) {
     var phoneNumber = req.body.phonenumber;
 
     console.log("pasó");
-    res.sendStatus(200);
+    network.registerGraduate(cardId, graduateRut, firstName, lastName, email, phoneNumber)
+                .then((response) => {
+                    //return error if error in response
+                    if (response.error != null) {
+                    res.json({
+                        error: response.error
+                    });
+                    } else {
+                    //else return success
+                    res.json({
+                        success: response
+                    });
+                    }
+                });
         
 });
 
